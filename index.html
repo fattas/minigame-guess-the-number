@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game Tebak Angka</title>
+  <!-- Muat font Press Start 2P -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <!-- Hubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Instruksi di pojok kanan atas (tidak tampil saat splash screen) -->
+  <div class="instructions">(Antara 1 sampai 50)</div>
+  
+  <!-- Splash Screen -->
+  <div class="splash-screen">
+    <div class="loading-text">
+      <div class="random-number"></div>
+      Loading...
+    </div>
+  </div>
+
+  <header>
+    <h1>Angka Berapakah Ini?</h1>
+    <button class="btn again">Main Lagi</button>
+    <div class="number">?</div>
+  </header>
+
+  <main>
+    <section class="left">
+      <input type="number" class="guess" />
+      <button class="btn check">Cek!</button>
+    </section>
+
+    <section class="right">
+      <p class="message">Mulai Menebak...</p>
+      <p class="label-score">💖 Nyawa: <span class="score">10</span></p>
+      <p class="label-highscore">🏆 Skor Tertinggi: <span class="highscore">0</span></p>
+    </section>
+  </main>
+
+  <!-- Popup Menang -->
+  <div id="winPopup" class="popup">
+    <div class="popup-content">
+      <img src="img/celebration.gif" alt="Menang" style="width: 300px">
+      <p class="win-message">Selamat! Anda menebak angka yang benar👍</p>
+      <button class="btn" onclick="closePopup('winPopup')">OK</button>
+    </div>
+  </div>
+
+  <!-- Popup Kalah -->
+  <div id="losePopup" class="popup">
+    <div class="popup-content">
+      <img src="img/gameover.gif" alt="Kalah" style="width: 300px">
+      <p class="lose-message">Coba lagi, Anda salah menebak angka😞</p>
+      <button class="btn" onclick="closePopup('losePopup')">OK</button>
+    </div>
+  </div>
+
+  <!-- Hubungkan file JavaScript eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
