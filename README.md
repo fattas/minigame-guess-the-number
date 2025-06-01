@@ -1,1 +1,1 @@
-# Live Website: https://minigame-guess-the-number.vercel.app/
+# Preview: https://minigame-guess-the-number.vercel.app/
